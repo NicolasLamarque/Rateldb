@@ -11,3 +11,16 @@ C:\Users\NIC\source\repos\RatelDB\obj\Debug\RatelDB.xml
 C:\Users\NIC\source\repos\RatelDB\obj\Debug\RatelDB.pdb
 C:\Users\NIC\source\repos\RatelDB\obj\Debug\RatelDB.F_Login.resources
 C:\Users\NIC\source\repos\RatelDB\obj\Debug\RatelDB.F_Param.resources
+C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\RatelDB.exe.config
+C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\RatelDB.exe
+C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\RatelDB.pdb
+C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\RatelDB.xml
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.vbproj.AssemblyReference.cache
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.F_Login.resources
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.F_Param.resources
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.Resources.resources
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.vbproj.GenerateResource.cache
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.vbproj.CoreCompileInputs.cache
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.exe
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.xml
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.pdb

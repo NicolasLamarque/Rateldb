@@ -1,0 +1,9 @@
+# Dossiers de compilation et de débogage
+bin/
+obj/
+Debug/
+Release/
+
+# Fichiers de configuration spécifiques à Visual Studio
+*.user
+*.suo

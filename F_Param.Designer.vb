@@ -29,11 +29,11 @@ Partial Class F_Param
         Me.GrBoxTheme = New System.Windows.Forms.GroupBox()
         Me.rbThemeSombre = New System.Windows.Forms.RadioButton()
         Me.rbThemeClair = New System.Windows.Forms.RadioButton()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.GrBox_Langue = New System.Windows.Forms.GroupBox()
+        Me.Rb_LaguageEN = New System.Windows.Forms.RadioButton()
+        Me.Rb_LanguageFr = New System.Windows.Forms.RadioButton()
         Me.GrBoxTheme.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.GrBox_Langue.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label5
@@ -119,49 +119,49 @@ Partial Class F_Param
         Me.rbThemeClair.Text = "Clair"
         Me.rbThemeClair.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'GrBox_Langue
         '
-        Me.GroupBox1.Controls.Add(Me.RadioButton3)
-        Me.GroupBox1.Controls.Add(Me.RadioButton4)
-        Me.GroupBox1.Font = New System.Drawing.Font("SerifGothic LT", 16.0!, System.Drawing.FontStyle.Italic)
-        Me.GroupBox1.ForeColor = System.Drawing.Color.Teal
-        Me.GroupBox1.Location = New System.Drawing.Point(391, 199)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.GroupBox1.Size = New System.Drawing.Size(294, 129)
-        Me.GroupBox1.TabIndex = 29
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Language"
+        Me.GrBox_Langue.Controls.Add(Me.Rb_LaguageEN)
+        Me.GrBox_Langue.Controls.Add(Me.Rb_LanguageFr)
+        Me.GrBox_Langue.Font = New System.Drawing.Font("SerifGothic LT", 16.0!, System.Drawing.FontStyle.Italic)
+        Me.GrBox_Langue.ForeColor = System.Drawing.Color.Teal
+        Me.GrBox_Langue.Location = New System.Drawing.Point(391, 199)
+        Me.GrBox_Langue.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GrBox_Langue.Name = "GrBox_Langue"
+        Me.GrBox_Langue.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.GrBox_Langue.Size = New System.Drawing.Size(294, 129)
+        Me.GrBox_Langue.TabIndex = 29
+        Me.GrBox_Langue.TabStop = False
+        Me.GrBox_Langue.Text = "Language"
         '
-        'RadioButton3
+        'Rb_LaguageEN
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(84, 72)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(100, 32)
-        Me.RadioButton3.TabIndex = 28
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Anglais"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.Rb_LaguageEN.AutoSize = True
+        Me.Rb_LaguageEN.Location = New System.Drawing.Point(84, 72)
+        Me.Rb_LaguageEN.Name = "Rb_LaguageEN"
+        Me.Rb_LaguageEN.Size = New System.Drawing.Size(100, 32)
+        Me.Rb_LaguageEN.TabIndex = 28
+        Me.Rb_LaguageEN.TabStop = True
+        Me.Rb_LaguageEN.Text = "Anglais"
+        Me.Rb_LaguageEN.UseVisualStyleBackColor = True
         '
-        'RadioButton4
+        'Rb_LanguageFr
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(84, 34)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(106, 32)
-        Me.RadioButton4.TabIndex = 27
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "Francais"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.Rb_LanguageFr.AutoSize = True
+        Me.Rb_LanguageFr.Location = New System.Drawing.Point(84, 34)
+        Me.Rb_LanguageFr.Name = "Rb_LanguageFr"
+        Me.Rb_LanguageFr.Size = New System.Drawing.Size(106, 32)
+        Me.Rb_LanguageFr.TabIndex = 27
+        Me.Rb_LanguageFr.TabStop = True
+        Me.Rb_LanguageFr.Text = "Francais"
+        Me.Rb_LanguageFr.UseVisualStyleBackColor = True
         '
         'F_Param
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(755, 692)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GrBox_Langue)
         Me.Controls.Add(Me.GrBoxTheme)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label5)
@@ -173,8 +173,8 @@ Partial Class F_Param
         Me.Text = "F_Param"
         Me.GrBoxTheme.ResumeLayout(False)
         Me.GrBoxTheme.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.GrBox_Langue.ResumeLayout(False)
+        Me.GrBox_Langue.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -187,7 +187,7 @@ Partial Class F_Param
     Friend WithEvents GrBoxTheme As GroupBox
     Friend WithEvents rbThemeSombre As RadioButton
     Friend WithEvents rbThemeClair As RadioButton
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents RadioButton4 As RadioButton
+    Friend WithEvents GrBox_Langue As GroupBox
+    Friend WithEvents Rb_LaguageEN As RadioButton
+    Friend WithEvents Rb_LanguageFr As RadioButton
 End Class

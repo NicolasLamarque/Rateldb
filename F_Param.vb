@@ -21,7 +21,7 @@ Public Class F_Param
 
         If currentLanguage = "Fr" Then
             Rb_LanguageFr.Checked = True
-        ElseIf currentTheme = "clair" Then
+        ElseIf currentLanguage = "En" Then
             Rb_LaguageEN.Checked = True
 
         End If

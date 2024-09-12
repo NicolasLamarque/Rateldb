@@ -32,6 +32,8 @@ Partial Class F_Param
         Me.GrBox_Langue = New System.Windows.Forms.GroupBox()
         Me.Rb_LaguageEN = New System.Windows.Forms.RadioButton()
         Me.Rb_LanguageFr = New System.Windows.Forms.RadioButton()
+        Me.Lbl_infoTheme = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GrBoxTheme.SuspendLayout()
         Me.GrBox_Langue.SuspendLayout()
         Me.SuspendLayout()
@@ -39,24 +41,24 @@ Partial Class F_Param
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("SerifGothic LT", 16.0!, System.Drawing.FontStyle.Italic)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Italic)
         Me.Label5.ForeColor = System.Drawing.Color.Teal
         Me.Label5.Location = New System.Drawing.Point(166, 90)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(122, 28)
+        Me.Label5.Size = New System.Drawing.Size(125, 26)
         Me.Label5.TabIndex = 21
         Me.Label5.Text = "Paramêtres"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("SerifGothic LT", 26.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Teal
         Me.Label1.Location = New System.Drawing.Point(163, 47)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(187, 43)
+        Me.Label1.Size = New System.Drawing.Size(206, 39)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "RATEL - DB"
         '
@@ -84,9 +86,10 @@ Partial Class F_Param
         '
         'GrBoxTheme
         '
+        Me.GrBoxTheme.Controls.Add(Me.Lbl_infoTheme)
         Me.GrBoxTheme.Controls.Add(Me.rbThemeSombre)
         Me.GrBoxTheme.Controls.Add(Me.rbThemeClair)
-        Me.GrBoxTheme.Font = New System.Drawing.Font("SerifGothic LT", 16.0!, System.Drawing.FontStyle.Italic)
+        Me.GrBoxTheme.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Italic)
         Me.GrBoxTheme.ForeColor = System.Drawing.Color.Teal
         Me.GrBoxTheme.Location = New System.Drawing.Point(47, 199)
         Me.GrBoxTheme.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -102,7 +105,7 @@ Partial Class F_Param
         Me.rbThemeSombre.AutoSize = True
         Me.rbThemeSombre.Location = New System.Drawing.Point(84, 72)
         Me.rbThemeSombre.Name = "rbThemeSombre"
-        Me.rbThemeSombre.Size = New System.Drawing.Size(107, 32)
+        Me.rbThemeSombre.Size = New System.Drawing.Size(107, 30)
         Me.rbThemeSombre.TabIndex = 28
         Me.rbThemeSombre.TabStop = True
         Me.rbThemeSombre.Text = "Sombre"
@@ -113,7 +116,7 @@ Partial Class F_Param
         Me.rbThemeClair.AutoSize = True
         Me.rbThemeClair.Location = New System.Drawing.Point(84, 34)
         Me.rbThemeClair.Name = "rbThemeClair"
-        Me.rbThemeClair.Size = New System.Drawing.Size(72, 32)
+        Me.rbThemeClair.Size = New System.Drawing.Size(75, 30)
         Me.rbThemeClair.TabIndex = 27
         Me.rbThemeClair.TabStop = True
         Me.rbThemeClair.Text = "Clair"
@@ -121,9 +124,10 @@ Partial Class F_Param
         '
         'GrBox_Langue
         '
+        Me.GrBox_Langue.Controls.Add(Me.Label2)
         Me.GrBox_Langue.Controls.Add(Me.Rb_LaguageEN)
         Me.GrBox_Langue.Controls.Add(Me.Rb_LanguageFr)
-        Me.GrBox_Langue.Font = New System.Drawing.Font("SerifGothic LT", 16.0!, System.Drawing.FontStyle.Italic)
+        Me.GrBox_Langue.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Italic)
         Me.GrBox_Langue.ForeColor = System.Drawing.Color.Teal
         Me.GrBox_Langue.Location = New System.Drawing.Point(391, 199)
         Me.GrBox_Langue.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -139,7 +143,7 @@ Partial Class F_Param
         Me.Rb_LaguageEN.AutoSize = True
         Me.Rb_LaguageEN.Location = New System.Drawing.Point(84, 72)
         Me.Rb_LaguageEN.Name = "Rb_LaguageEN"
-        Me.Rb_LaguageEN.Size = New System.Drawing.Size(100, 32)
+        Me.Rb_LaguageEN.Size = New System.Drawing.Size(102, 30)
         Me.Rb_LaguageEN.TabIndex = 28
         Me.Rb_LaguageEN.TabStop = True
         Me.Rb_LaguageEN.Text = "Anglais"
@@ -150,11 +154,31 @@ Partial Class F_Param
         Me.Rb_LanguageFr.AutoSize = True
         Me.Rb_LanguageFr.Location = New System.Drawing.Point(84, 34)
         Me.Rb_LanguageFr.Name = "Rb_LanguageFr"
-        Me.Rb_LanguageFr.Size = New System.Drawing.Size(106, 32)
+        Me.Rb_LanguageFr.Size = New System.Drawing.Size(113, 30)
         Me.Rb_LanguageFr.TabIndex = 27
         Me.Rb_LanguageFr.TabStop = True
         Me.Rb_LanguageFr.Text = "Francais"
         Me.Rb_LanguageFr.UseVisualStyleBackColor = True
+        '
+        'Lbl_infoTheme
+        '
+        Me.Lbl_infoTheme.AutoSize = True
+        Me.Lbl_infoTheme.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Italic)
+        Me.Lbl_infoTheme.Location = New System.Drawing.Point(7, 111)
+        Me.Lbl_infoTheme.Name = "Lbl_infoTheme"
+        Me.Lbl_infoTheme.Size = New System.Drawing.Size(75, 13)
+        Me.Lbl_infoTheme.TabIndex = 30
+        Me.Lbl_infoTheme.Text = "Thème actuel:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Italic)
+        Me.Label2.Location = New System.Drawing.Point(7, 111)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(86, 13)
+        Me.Label2.TabIndex = 31
+        Me.Label2.Text = "Langue actuelle:"
         '
         'F_Param
         '
@@ -190,4 +214,6 @@ Partial Class F_Param
     Friend WithEvents GrBox_Langue As GroupBox
     Friend WithEvents Rb_LaguageEN As RadioButton
     Friend WithEvents Rb_LanguageFr As RadioButton
+    Friend WithEvents Lbl_infoTheme As Label
+    Friend WithEvents Label2 As Label
 End Class

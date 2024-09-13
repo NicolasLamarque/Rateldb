@@ -27,13 +27,13 @@ Partial Class F_Param
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GrBoxTheme = New System.Windows.Forms.GroupBox()
+        Me.Lbl_infoTheme = New System.Windows.Forms.Label()
         Me.rbThemeSombre = New System.Windows.Forms.RadioButton()
         Me.rbThemeClair = New System.Windows.Forms.RadioButton()
         Me.GrBox_Langue = New System.Windows.Forms.GroupBox()
+        Me.Lbl_infoLanguage = New System.Windows.Forms.Label()
         Me.Rb_LaguageEN = New System.Windows.Forms.RadioButton()
         Me.Rb_LanguageFr = New System.Windows.Forms.RadioButton()
-        Me.Lbl_infoTheme = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.GrBoxTheme.SuspendLayout()
         Me.GrBox_Langue.SuspendLayout()
         Me.SuspendLayout()
@@ -100,6 +100,16 @@ Partial Class F_Param
         Me.GrBoxTheme.TabStop = False
         Me.GrBoxTheme.Text = "Thème"
         '
+        'Lbl_infoTheme
+        '
+        Me.Lbl_infoTheme.AutoSize = True
+        Me.Lbl_infoTheme.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Italic)
+        Me.Lbl_infoTheme.Location = New System.Drawing.Point(7, 111)
+        Me.Lbl_infoTheme.Name = "Lbl_infoTheme"
+        Me.Lbl_infoTheme.Size = New System.Drawing.Size(75, 13)
+        Me.Lbl_infoTheme.TabIndex = 30
+        Me.Lbl_infoTheme.Text = "Thème actuel:"
+        '
         'rbThemeSombre
         '
         Me.rbThemeSombre.AutoSize = True
@@ -124,7 +134,7 @@ Partial Class F_Param
         '
         'GrBox_Langue
         '
-        Me.GrBox_Langue.Controls.Add(Me.Label2)
+        Me.GrBox_Langue.Controls.Add(Me.Lbl_infoLanguage)
         Me.GrBox_Langue.Controls.Add(Me.Rb_LaguageEN)
         Me.GrBox_Langue.Controls.Add(Me.Rb_LanguageFr)
         Me.GrBox_Langue.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Italic)
@@ -137,6 +147,16 @@ Partial Class F_Param
         Me.GrBox_Langue.TabIndex = 29
         Me.GrBox_Langue.TabStop = False
         Me.GrBox_Langue.Text = "Language"
+        '
+        'Lbl_infoLanguage
+        '
+        Me.Lbl_infoLanguage.AutoSize = True
+        Me.Lbl_infoLanguage.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Italic)
+        Me.Lbl_infoLanguage.Location = New System.Drawing.Point(7, 111)
+        Me.Lbl_infoLanguage.Name = "Lbl_infoLanguage"
+        Me.Lbl_infoLanguage.Size = New System.Drawing.Size(86, 13)
+        Me.Lbl_infoLanguage.TabIndex = 31
+        Me.Lbl_infoLanguage.Text = "Langue actuelle:"
         '
         'Rb_LaguageEN
         '
@@ -159,26 +179,6 @@ Partial Class F_Param
         Me.Rb_LanguageFr.TabStop = True
         Me.Rb_LanguageFr.Text = "Francais"
         Me.Rb_LanguageFr.UseVisualStyleBackColor = True
-        '
-        'Lbl_infoTheme
-        '
-        Me.Lbl_infoTheme.AutoSize = True
-        Me.Lbl_infoTheme.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Italic)
-        Me.Lbl_infoTheme.Location = New System.Drawing.Point(7, 111)
-        Me.Lbl_infoTheme.Name = "Lbl_infoTheme"
-        Me.Lbl_infoTheme.Size = New System.Drawing.Size(75, 13)
-        Me.Lbl_infoTheme.TabIndex = 30
-        Me.Lbl_infoTheme.Text = "Thème actuel:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Italic)
-        Me.Label2.Location = New System.Drawing.Point(7, 111)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 13)
-        Me.Label2.TabIndex = 31
-        Me.Label2.Text = "Langue actuelle:"
         '
         'F_Param
         '
@@ -215,5 +215,5 @@ Partial Class F_Param
     Friend WithEvents Rb_LaguageEN As RadioButton
     Friend WithEvents Rb_LanguageFr As RadioButton
     Friend WithEvents Lbl_infoTheme As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents Lbl_infoLanguage As Label
 End Class

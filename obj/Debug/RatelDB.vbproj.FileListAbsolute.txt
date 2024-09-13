@@ -24,3 +24,12 @@ C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.vbproj.CoreCompileInputs
 C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.exe
 C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.xml
 C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.pdb
+C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\EntityFramework.dll
+C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\System.Data.SQLite.dll
+C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\EntityFramework.xml
+C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\System.Data.SQLite.xml
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.vbproj.Up2Date

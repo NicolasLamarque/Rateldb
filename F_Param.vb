@@ -1,29 +1,36 @@
 ﻿Imports System.CodeDom.Compiler
 Imports System.Configuration
+Imports System.Data.Entity.Infrastructure.Pluralization
 Imports System.IO
+Imports System.Resources
+Imports System.Runtime.Remoting.Metadata.W3cXsd2001
 Imports System.Windows.Forms.VisualStyles
 
 Public Class F_Param
-    Dim ini As New IniFile(Path.Combine(Application.StartupPath, "config.ini"))
+
     Private Sub F_Param_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        InitializeDatabase()
+
+        Dim currentTheme As String = GetSetting("theme")
+        Dim currentLanguage As String = GetSetting("language")
 
 
-        Dim currentTheme As String = ini.ReadValue("AppSettings", "theme")
-        Dim currentLanguage As String = ini.ReadValue("AppSettings", "language")
-        MessageBox.Show(Path.Combine(Application.StartupPath, "config.ini"))
 
 
         If currentTheme = "clair" Then
             rbThemeClair.Checked = True
+            Me.Lbl_infoTheme.Text = "Theme :" & currentTheme.ToString
         ElseIf currentTheme = "sombre" Then
             rbThemeSombre.Checked = True
+            Me.Lbl_infoTheme.Text = "Theme :" & currentTheme.ToString
         End If
 
-        If currentLanguage = "Fr" Then
+        If currentLanguage = "fr" Then
             Rb_LanguageFr.Checked = True
-        ElseIf currentLanguage = "En" Then
+            Me.Lbl_infoLanguage.Text = "Language actuel : Français" & "(" & currentLanguage.ToString & ")"
+        ElseIf currentLanguage = "en" Then
             Rb_LaguageEN.Checked = True
-
+            Me.Lbl_infoLanguage.Text = "Actual language : English" & "(" & currentLanguage.ToString & ")"
         End If
 
     End Sub
@@ -39,8 +46,8 @@ Public Class F_Param
             ' Sauvegarder le thème sélectionné
             saveTheme("sombre")
         End If
-        Dim themeread As String = ini.ReadValue("AppSettings", "theme")
-        MessageBox.Show(themeread)
+
+
 
     End Sub
 
@@ -48,61 +55,39 @@ Public Class F_Param
 
 
     Private Sub Rb_LanguageFr_CheckedChanged(sender As Object, e As EventArgs) Handles Rb_LanguageFr.CheckedChanged
-        Dim currentTheme As String = ini.ReadValue("AppSettings", "theme")
+        Dim currentTheme As String = GetSetting("language")
         If Rb_LanguageFr.Checked Then
-            saveLanguage("Fr")
+            saveLanguage("fr")
 
         End If
 
     End Sub
 
     Private Sub Rb_LaguageEN_CheckedChanged(sender As Object, e As EventArgs) Handles Rb_LaguageEN.CheckedChanged
-        Dim currentTheme As String = ini.ReadValue("AppSettings", "theme")
+        Dim currentLanguage As String = GetSetting("language")
         If Rb_LaguageEN.Checked Then
-            saveLanguage("En")
+            saveLanguage("en")
 
         End If
-        Me.Lbl_infoTheme.Text = "Actual theme:" & GetSettingItem(Path.Combine(Application.StartupPath, "config.ini"), "language")
+
     End Sub
 
 
 
     Public Sub saveTheme(theme As String)
-
-        ini.WriteValue("AppSettings", "theme", theme)
+        SetSetting("theme", theme)
 
     End Sub
 
 
     Public Sub saveLanguage(Langue As String)
+        SetSetting("language", Langue)
 
-        ini.WriteValue("AppSettings", "language", Langue)
     End Sub
 
-    Public Function ReadValueWithDebug(section As String, key As String) As String
-        ' Lire la valeur avec la méthode existante
-        Dim value As String = ini.ReadValue(section, key)
 
-        ' Afficher des informations de débogage
-        If String.IsNullOrEmpty(value) Then
-            MessageBox.Show($"La clé '{key}' dans la section '{section}' est introuvable ou vide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        Else
-            MessageBox.Show($"Valeur lue pour '{key}' dans la section '{section}': {value}", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
 
-        ' Retourner la valeur lue
-        Return value
-    End Function
 
-    Public Function GetSettingItem(ByVal File As String, ByVal Identifier As String) As String
-        Dim S As New IO.StreamReader(File) : Dim Result As String = ""
-        Do While (S.Peek <> -1)
-            Dim Line As String = S.ReadLine
-            If Line.ToLower.StartsWith(Identifier.ToLower & "=") Then
-                Result = Line.Substring(Identifier.Length + 2)
-            End If
-        Loop
-        Return Result
-    End Function
+
 
 End Class

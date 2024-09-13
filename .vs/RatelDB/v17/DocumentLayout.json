@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\config.ini||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:config.ini||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\f_param.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\f_param.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:f_param.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\f_param.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\f_param.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:f_param.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\inifile.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:inifile.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\gestiondesparametres.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:gestiondesparametres.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "config.ini",
-              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\Config.ini",
-              "RelativeDocumentMoniker": "Config.ini",
-              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\Config.ini",
-              "RelativeToolTip": "Config.ini",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002768|",
-              "WhenOpened": "2024-09-12T16:52:37.199Z",
+              "DocumentIndex": 2,
+              "Title": "GestionDesParametres.vb",
+              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\GestionDesParametres.vb",
+              "RelativeDocumentMoniker": "GestionDesParametres.vb",
+              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\GestionDesParametres.vb",
+              "RelativeToolTip": "GestionDesParametres.vb",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-09-12T21:45:11.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "F_Param.vb",
               "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Param.vb",
               "RelativeDocumentMoniker": "F_Param.vb",
               "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Param.vb",
               "RelativeToolTip": "F_Param.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwB4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-12T16:50:16.157Z",
+              "WhenOpened": "2024-09-12T21:38:45.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IniFile.vb",
-              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\IniFile.vb",
-              "RelativeDocumentMoniker": "IniFile.vb",
-              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\IniFile.vb",
-              "RelativeToolTip": "IniFile.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-12T16:48:50.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "F_Param.vb [Design]",
               "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Param.vb",
               "RelativeDocumentMoniker": "F_Param.vb",
               "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Param.vb [Design]",
               "RelativeToolTip": "F_Param.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-12T16:48:47.043Z",
+              "WhenOpened": "2024-09-12T21:38:42.367Z",
               "EditorCaption": " [Design]"
             }
           ]

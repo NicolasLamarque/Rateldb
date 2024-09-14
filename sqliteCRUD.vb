@@ -28,21 +28,22 @@ Public Class sqliteCRUD
             End Using
         End Sub
 
-        ' Méthode pour lire tous les enregistrements d'une table
-        Public Function GetAllRecords(tableName As String) As DataTable
-            Dim dt As New DataTable()
-            Using connection As New SQLiteConnection(connectionString)
-                connection.Open()
-                Dim query As String = $"SELECT * FROM {tableName}"
-                Using adapter As New SQLiteDataAdapter(query, connection)
-                    adapter.Fill(dt)
-                End Using
+    ' Méthode pour lire tous les enregistrements d'une table
+    ' Fonction pour récupérer tous les enregistrements d'une table avec des champs spécifiés
+    Public Function GetAllRecords(tableName As String, Optional fields As String = "*") As DataTable
+        Dim dt As New DataTable()
+        Using connection As New SQLiteConnection(connectionString)
+            connection.Open()
+            Dim query As String = $"SELECT {fields} FROM {tableName}"
+            Using adapter As New SQLiteDataAdapter(query, connection)
+                adapter.Fill(dt)
             End Using
-            Return dt
-        End Function
+        End Using
+        Return dt
+    End Function
 
-        ' Méthode pour mettre à jour un enregistrement
-        Public Sub UpdateRecord(tableName As String, id As Integer, parameters As Dictionary(Of String, Object))
+    ' Méthode pour mettre à jour un enregistrement
+    Public Sub UpdateRecord(tableName As String, id As Integer, parameters As Dictionary(Of String, Object))
             Using connection As New SQLiteConnection(connectionString)
                 connection.Open()
                 Dim setClause As String = String.Join(", ", parameters.Keys.Select(Function(k) k & " = @" & k))
@@ -86,22 +87,51 @@ Public Class sqliteCRUD
             Return dt
         End Function
 
-        ' Méthode pour rechercher un enregistrement par nom
-        Public Function SearchByName(tableName As String, nameColumn As String, name As String) As DataTable
-            Dim dt As New DataTable()
-            Using connection As New SQLiteConnection(connectionString)
-                connection.Open()
-                Dim query As String = $"SELECT * FROM {tableName} WHERE {nameColumn} LIKE @Name"
-                Using command As New SQLiteCommand(query, connection)
-                    command.Parameters.AddWithValue("@Name", "%" & name & "%")
-                    Using adapter As New SQLiteDataAdapter(command)
-                        adapter.Fill(dt)
-                    End Using
+    ' Méthode pour rechercher un enregistrement par nom
+    Public Function SearchByName(tableName As String, nameColumn As String, name As String) As DataTable
+        Dim dt As New DataTable()
+        Using connection As New SQLiteConnection(connectionString)
+            connection.Open()
+            Dim query As String = $"SELECT * FROM {tableName} WHERE {nameColumn} LIKE @Name"
+            Using command As New SQLiteCommand(query, connection)
+                command.Parameters.AddWithValue("@Name", "%" & name & "%")
+                Using adapter As New SQLiteDataAdapter(command)
+                    adapter.Fill(dt)
                 End Using
             End Using
-            Return dt
-        End Function
-    End Class
+        End Using
+        Return dt
+    End Function
+
+
+    ' Fonction pour récupérer un client par son ID
+    Public Function GetClient(id As Integer) As Dictionary(Of String, Object)
+        Dim client As New Dictionary(Of String, Object)
+
+        Using connection As New SQLiteConnection(connectionString)
+            connection.Open()
+
+            Using command As New SQLiteCommand(connection)
+                command.CommandText = "SELECT * FROM Clients WHERE ID = @id"
+                command.Parameters.AddWithValue("@id", id)
+
+                Using reader As SQLiteDataReader = command.ExecuteReader()
+                    If reader.Read() Then
+                        For i As Integer = 0 To reader.FieldCount - 1
+                            client(reader.GetName(i)) = reader(i)
+                        Next
+                    End If
+                End Using
+            End Using
+        End Using
+
+        Return client
+    End Function
+
+
+
+
+End Class
 
 
 

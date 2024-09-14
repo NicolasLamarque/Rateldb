@@ -95,6 +95,13 @@
     <Compile Include="BaseForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ClientManager.vb" />
+    <Compile Include="ClientsListe.Designer.vb">
+      <DependentUpon>ClientsListe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientsListe.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormAccueil.Designer.vb">
       <DependentUpon>FormAccueil.vb</DependentUpon>
     </Compile>
@@ -135,6 +142,9 @@
     <Compile Include="ThemeManager.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ClientsListe.resx">
+      <DependentUpon>ClientsListe.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAccueil.resx">
       <DependentUpon>FormAccueil.vb</DependentUpon>
     </EmbeddedResource>

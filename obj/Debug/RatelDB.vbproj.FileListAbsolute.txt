@@ -34,3 +34,4 @@ C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\NIC\Documents\GitHub\Rateldb\bin\Debug\System.Data.SQLite.xml
 C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.vbproj.Up2Date
 C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.FormAccueil.resources
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.ClientsListe.resources

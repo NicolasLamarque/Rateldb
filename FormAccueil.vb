@@ -1,4 +1,7 @@
-﻿Public Class FormAccueil
+﻿Imports System.Windows.Forms.VisualStyles
+
+Public Class FormAccueil
+    Dim clientManager As New ClientManager()
     Dim resizer As New ImageResizer()
 
     Private themeManager As ThemeManager
@@ -11,32 +14,24 @@
     End Sub
 
     Private Sub FormAccueil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim newTheme As String = If(themeManager.GetCurrentTheme() = "clair", "sombre", "clair")
 
-        If newTheme = "clair" Then
-            Me.btnChangeTheme.Image = resizer.ChangeBtnImageTaille15x15("lightbulb_on")
-        Else
-            Me.btnChangeTheme.Image = resizer.ChangeBtnImageTaille15x15("lightbulb")
-        End If
+
 
     End Sub
-    Private Sub btnChangeTheme_Click(sender As Object, e As EventArgs) Handles btnChangeTheme.Click
 
+    Private Sub Button04_Click(sender As Object, e As EventArgs) Handles Button04.Click
+        ' Créer un nouveau client
+        Dim newClient As New Dictionary(Of String, Object) From {
+    {"NumeroAssuranceMaladie", "123456789"},
+    {"Nom", "Dupont"},
+    {"Prenom", "Jean"},
+    {"DateNaissance", #01/01/1980#},
+    {"Sexe", "Masculin"}
+}
 
-
-
-        Dim newTheme As String = If(themeManager.GetCurrentTheme() = "clair", "sombre", "clair")
-        themeManager.ChangeTheme(newTheme)
-        themeManager.ApplyTheme(Me) ' Réappliquez le thème après le changement
-        If newTheme = "clair" Then
-            Me.btnChangeTheme.Image = resizer.ChangeBtnImageTaille15x15("lightbulb_on")
-        Else
-            Me.btnChangeTheme.Image = resizer.ChangeBtnImageTaille15x15("lightbulb")
-        End If
+        ' Enregistrer le nouveau client
+        clientManager.SetClient(newClient)
+        MessageBox.Show(newClient.ToString())
     End Sub
-
-    ' Méthode pour changer l'image du bouton en fonction du thème
-
-
 
 End Class

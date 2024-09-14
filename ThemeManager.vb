@@ -32,11 +32,11 @@ Public Class ThemeManager
             SaveTheme(newTheme)
         End Sub
 
-        Private Sub SaveTheme(theme As String)
+    Public Sub SaveTheme(theme As String)
         SetSetting("theme", theme)
     End Sub
 
-        Public Function GetCurrentTheme() As String
+    Public Function GetCurrentTheme() As String
             Return currentTheme
         End Function
 

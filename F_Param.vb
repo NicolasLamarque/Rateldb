@@ -7,58 +7,85 @@ Imports System.Runtime.Remoting.Metadata.W3cXsd2001
 Imports System.Windows.Forms.VisualStyles
 
 Public Class F_Param
+    Dim currentTheme As String = GetSetting("theme")
+    Dim currentLanguage As String = GetSetting("language")
+    Dim currentDate As DateTime = DateTime.Now
+    Dim formattedDate As String = currentDate.ToString("yyyy-MM-dd HH:mm")
 
     Private Sub F_Param_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InitializeDatabase()
 
-        Dim currentTheme As String = GetSetting("theme")
-        Dim currentLanguage As String = GetSetting("language")
 
+        ApplyTheme(currentTheme)
 
+        ApplyLanguage(currentLanguage)
 
-
-        If currentTheme = "clair" Then
-            rbThemeClair.Checked = True
-            Me.Lbl_infoTheme.Text = "Theme :" & currentTheme.ToString
-        ElseIf currentTheme = "sombre" Then
-            rbThemeSombre.Checked = True
-            Me.Lbl_infoTheme.Text = "Theme :" & currentTheme.ToString
-        End If
-
-        If currentLanguage = "fr" Then
-            Rb_LanguageFr.Checked = True
-            Me.Lbl_infoLanguage.Text = "Language actuel : Français" & "(" & currentLanguage.ToString & ")"
-        ElseIf currentLanguage = "en" Then
-            Rb_LaguageEN.Checked = True
-            Me.Lbl_infoLanguage.Text = "Actual language : English" & "(" & currentLanguage.ToString & ")"
-        End If
-
+        ToolStripStatusLabel_time.Text = "Date et heure actuelles : " & formattedDate.ToString()
     End Sub
 
     Private Sub rbThemeClair_CheckedChanged(sender As Object, e As EventArgs) Handles rbThemeClair.CheckedChanged
         If rbThemeClair.Checked Then
             ' Sauvegarder le thème sélectionné
             saveTheme("clair")
+            Dim theme As String = "clair"
+            ApplyTheme(theme)
         End If
+
     End Sub
     Private Sub rbThemeSombre_CheckedChanged(sender As Object, e As EventArgs) Handles rbThemeSombre.CheckedChanged
         If rbThemeSombre.Checked Then
             ' Sauvegarder le thème sélectionné
             saveTheme("sombre")
+            Dim theme As String = "sombre"
+            ApplyTheme(theme)
         End If
 
 
 
     End Sub
 
+    Private Sub ApplyTheme(theme As String)
+        If theme = "sombre" Then
+            Me.BackColor = Color.DarkGray
+            Me.ForeColor = Color.LightGray
+            ' Changez d'autres contrôles ici
+        Else
+            Me.BackColor = Color.LightGray
+            Me.ForeColor = Color.DarkGray
+            ' Changez d'autres contrôles ici
+        End If
 
+        If theme = "clair" Then
+            rbThemeClair.Checked = True
+            Me.Lbl_infoTheme.Text = "Theme :" & theme.ToString
+        ElseIf theme = "sombre" Then
+            rbThemeSombre.Checked = True
+            Me.Lbl_infoTheme.Text = "Theme :" & theme.ToString
+        End If
+    End Sub
+
+    Private Sub ApplyLanguage(language As String)
+        If language = "fr" Then
+            Rb_LanguageFr.Checked = True
+            Me.Lbl_infoLanguage.Text = "Language actuel : Français" & "(" & language.ToString & ")"
+            Me.Lbl_SousTitre.Text = "Paramêtres"
+            Me.Lbl_Titre.Text = "Ratel Db"
+            ToolStripStatusLabel_time.Text = "Date et heure actuelles : " & formattedDate.ToString()
+        ElseIf language = "en" Then
+            Rb_LaguageEN.Checked = True
+            Me.Lbl_infoLanguage.Text = "Actual language : English" & "(" & language.ToString & ")"
+            Me.Lbl_SousTitre.Text = "Settings"
+            Me.Lbl_Titre.Text = "Honey Badger"
+            ToolStripStatusLabel_time.Text = "Date & Time : " & formattedDate.ToString()
+        End If
+    End Sub
 
 
     Private Sub Rb_LanguageFr_CheckedChanged(sender As Object, e As EventArgs) Handles Rb_LanguageFr.CheckedChanged
-        Dim currentTheme As String = GetSetting("language")
+        Dim currentLanguage As String = GetSetting("language")
         If Rb_LanguageFr.Checked Then
             saveLanguage("fr")
-
+            ApplyLanguage("fr")
         End If
 
     End Sub
@@ -67,7 +94,7 @@ Public Class F_Param
         Dim currentLanguage As String = GetSetting("language")
         If Rb_LaguageEN.Checked Then
             saveLanguage("en")
-
+            ApplyLanguage("en")
         End If
 
     End Sub
@@ -76,17 +103,12 @@ Public Class F_Param
 
     Public Sub saveTheme(theme As String)
         SetSetting("theme", theme)
-
     End Sub
 
 
     Public Sub saveLanguage(Langue As String)
         SetSetting("language", Langue)
-
     End Sub
-
-
-
 
 
 

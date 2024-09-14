@@ -9,10 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\f_param.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:f_param.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\gestiondesparametres.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:gestiondesparametres.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,20 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GestionDesParametres.vb",
-              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\GestionDesParametres.vb",
-              "RelativeDocumentMoniker": "GestionDesParametres.vb",
-              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\GestionDesParametres.vb",
-              "RelativeToolTip": "GestionDesParametres.vb",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCsAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-12T21:45:11.039Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -44,9 +28,9 @@
               "RelativeDocumentMoniker": "F_Param.vb",
               "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Param.vb",
               "RelativeToolTip": "F_Param.vb",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCoAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-12T21:38:45.677Z",
+              "WhenOpened": "2024-09-14T03:36:13.001Z",
               "EditorCaption": ""
             },
             {
@@ -58,7 +42,7 @@
               "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Param.vb [Design]",
               "RelativeToolTip": "F_Param.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-12T21:38:42.367Z"
+              "WhenOpened": "2024-09-14T03:22:35.818Z"
             }
           ]
         }

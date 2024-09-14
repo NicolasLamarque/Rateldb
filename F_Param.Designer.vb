@@ -22,8 +22,8 @@ Partial Class F_Param
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Lbl_SousTitre = New System.Windows.Forms.Label()
+        Me.Lbl_Titre = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GrBoxTheme = New System.Windows.Forms.GroupBox()
@@ -34,33 +34,36 @@ Partial Class F_Param
         Me.Lbl_infoLanguage = New System.Windows.Forms.Label()
         Me.Rb_LaguageEN = New System.Windows.Forms.RadioButton()
         Me.Rb_LanguageFr = New System.Windows.Forms.RadioButton()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel_time = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GrBoxTheme.SuspendLayout()
         Me.GrBox_Langue.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label5
+        'Lbl_SousTitre
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Italic)
-        Me.Label5.ForeColor = System.Drawing.Color.Teal
-        Me.Label5.Location = New System.Drawing.Point(166, 90)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(125, 26)
-        Me.Label5.TabIndex = 21
-        Me.Label5.Text = "Paramêtres"
+        Me.Lbl_SousTitre.AutoSize = True
+        Me.Lbl_SousTitre.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Italic)
+        Me.Lbl_SousTitre.ForeColor = System.Drawing.Color.Teal
+        Me.Lbl_SousTitre.Location = New System.Drawing.Point(122, 52)
+        Me.Lbl_SousTitre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Lbl_SousTitre.Name = "Lbl_SousTitre"
+        Me.Lbl_SousTitre.Size = New System.Drawing.Size(125, 26)
+        Me.Lbl_SousTitre.TabIndex = 21
+        Me.Lbl_SousTitre.Text = "Paramêtres"
         '
-        'Label1
+        'Lbl_Titre
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Teal
-        Me.Label1.Location = New System.Drawing.Point(163, 47)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(206, 39)
-        Me.Label1.TabIndex = 20
-        Me.Label1.Text = "RATEL - DB"
+        Me.Lbl_Titre.AutoSize = True
+        Me.Lbl_Titre.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Titre.ForeColor = System.Drawing.Color.Teal
+        Me.Lbl_Titre.Location = New System.Drawing.Point(119, 9)
+        Me.Lbl_Titre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Lbl_Titre.Name = "Lbl_Titre"
+        Me.Lbl_Titre.Size = New System.Drawing.Size(206, 39)
+        Me.Lbl_Titre.TabIndex = 20
+        Me.Lbl_Titre.Text = "RATEL - DB"
         '
         'Button1
         '
@@ -68,17 +71,17 @@ Partial Class F_Param
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = Global.RatelDB.My.Resources.Resources.ratel_honey_badger_database
-        Me.Button1.Location = New System.Drawing.Point(18, 18)
+        Me.Button1.Location = New System.Drawing.Point(0, 5)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(159, 154)
+        Me.Button1.Size = New System.Drawing.Size(111, 111)
         Me.Button1.TabIndex = 19
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Panel1.Location = New System.Drawing.Point(18, 157)
+        Me.Panel1.Location = New System.Drawing.Point(13, 126)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(730, 15)
@@ -89,9 +92,10 @@ Partial Class F_Param
         Me.GrBoxTheme.Controls.Add(Me.Lbl_infoTheme)
         Me.GrBoxTheme.Controls.Add(Me.rbThemeSombre)
         Me.GrBoxTheme.Controls.Add(Me.rbThemeClair)
+        Me.GrBoxTheme.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GrBoxTheme.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Italic)
         Me.GrBoxTheme.ForeColor = System.Drawing.Color.Teal
-        Me.GrBoxTheme.Location = New System.Drawing.Point(47, 199)
+        Me.GrBoxTheme.Location = New System.Drawing.Point(46, 163)
         Me.GrBoxTheme.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GrBoxTheme.Name = "GrBoxTheme"
         Me.GrBoxTheme.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -139,7 +143,7 @@ Partial Class F_Param
         Me.GrBox_Langue.Controls.Add(Me.Rb_LanguageFr)
         Me.GrBox_Langue.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Italic)
         Me.GrBox_Langue.ForeColor = System.Drawing.Color.Teal
-        Me.GrBox_Langue.Location = New System.Drawing.Point(391, 199)
+        Me.GrBox_Langue.Location = New System.Drawing.Point(390, 163)
         Me.GrBox_Langue.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GrBox_Langue.Name = "GrBox_Langue"
         Me.GrBox_Langue.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -180,16 +184,34 @@ Partial Class F_Param
         Me.Rb_LanguageFr.Text = "Francais"
         Me.Rb_LanguageFr.UseVisualStyleBackColor = True
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel_time})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 384)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(755, 22)
+        Me.StatusStrip1.TabIndex = 30
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel_time
+        '
+        Me.ToolStripStatusLabel_time.ForeColor = System.Drawing.Color.White
+        Me.ToolStripStatusLabel_time.Name = "ToolStripStatusLabel_time"
+        Me.ToolStripStatusLabel_time.Size = New System.Drawing.Size(37, 17)
+        Me.ToolStripStatusLabel_time.Text = "Date :"
+        '
         'F_Param
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(755, 692)
+        Me.ClientSize = New System.Drawing.Size(755, 406)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.GrBox_Langue)
         Me.Controls.Add(Me.GrBoxTheme)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Lbl_SousTitre)
+        Me.Controls.Add(Me.Lbl_Titre)
         Me.Controls.Add(Me.Button1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -199,13 +221,15 @@ Partial Class F_Param
         Me.GrBoxTheme.PerformLayout()
         Me.GrBox_Langue.ResumeLayout(False)
         Me.GrBox_Langue.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents Lbl_SousTitre As Label
+    Friend WithEvents Lbl_Titre As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents GrBoxTheme As GroupBox
@@ -216,4 +240,6 @@ Partial Class F_Param
     Friend WithEvents Rb_LanguageFr As RadioButton
     Friend WithEvents Lbl_infoTheme As Label
     Friend WithEvents Lbl_infoLanguage As Label
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents ToolStripStatusLabel_time As ToolStripStatusLabel
 End Class

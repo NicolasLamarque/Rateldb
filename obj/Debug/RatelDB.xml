@@ -22,6 +22,16 @@ RatelDB
   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
 </summary>
 </member>
+<member name="P:RatelDB.My.Resources.Resources.lightbulb">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.lightbulb_on">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RatelDB.My.Resources.Resources.ratel_honey_badger_database">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.

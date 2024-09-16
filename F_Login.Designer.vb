@@ -32,17 +32,18 @@ Partial Class F_Login
         Me.Lbl_Identifiant = New System.Windows.Forms.Label()
         Me.LblByNic = New System.Windows.Forms.Label()
         Me.Lbl_titre = New System.Windows.Forms.Label()
-        Me.BtnLogo = New System.Windows.Forms.Button()
+        Me.PanelLogo = New System.Windows.Forms.Panel()
+        Me.PanelLogo.SuspendLayout()
         Me.SuspendLayout()
         '
         'Lbl_ActionRegister
         '
         Me.Lbl_ActionRegister.AutoSize = True
-        Me.Lbl_ActionRegister.Font = New System.Drawing.Font("SerifGothic LT Light", 9.749999!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_ActionRegister.ForeColor = System.Drawing.Color.Orange
-        Me.Lbl_ActionRegister.Location = New System.Drawing.Point(462, 213)
+        Me.Lbl_ActionRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_ActionRegister.ForeColor = System.Drawing.Color.Purple
+        Me.Lbl_ActionRegister.Location = New System.Drawing.Point(282, 196)
         Me.Lbl_ActionRegister.Name = "Lbl_ActionRegister"
-        Me.Lbl_ActionRegister.Size = New System.Drawing.Size(70, 17)
+        Me.Lbl_ActionRegister.Size = New System.Drawing.Size(79, 16)
         Me.Lbl_ActionRegister.TabIndex = 21
         Me.Lbl_ActionRegister.Text = "S'enregister"
         '
@@ -73,18 +74,18 @@ Partial Class F_Login
         'Lbl_TitreInfo
         '
         Me.Lbl_TitreInfo.AutoSize = True
-        Me.Lbl_TitreInfo.Font = New System.Drawing.Font("SerifGothic LT", 16.0!, System.Drawing.FontStyle.Italic)
+        Me.Lbl_TitreInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Italic)
         Me.Lbl_TitreInfo.ForeColor = System.Drawing.Color.Teal
-        Me.Lbl_TitreInfo.Location = New System.Drawing.Point(136, 57)
+        Me.Lbl_TitreInfo.Location = New System.Drawing.Point(216, 51)
         Me.Lbl_TitreInfo.Name = "Lbl_TitreInfo"
-        Me.Lbl_TitreInfo.Size = New System.Drawing.Size(261, 28)
+        Me.Lbl_TitreInfo.Size = New System.Drawing.Size(256, 26)
         Me.Lbl_TitreInfo.TabIndex = 18
         Me.Lbl_TitreInfo.Text = "Formulaire de Connexion"
         '
         'TextBox_Mp
         '
         Me.TextBox_Mp.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox_Mp.Location = New System.Drawing.Point(285, 141)
+        Me.TextBox_Mp.Location = New System.Drawing.Point(286, 141)
         Me.TextBox_Mp.Name = "TextBox_Mp"
         Me.TextBox_Mp.Size = New System.Drawing.Size(255, 26)
         Me.TextBox_Mp.TabIndex = 17
@@ -92,7 +93,7 @@ Partial Class F_Login
         'TextBox_Identifiant
         '
         Me.TextBox_Identifiant.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox_Identifiant.Location = New System.Drawing.Point(285, 109)
+        Me.TextBox_Identifiant.Location = New System.Drawing.Point(286, 109)
         Me.TextBox_Identifiant.Name = "TextBox_Identifiant"
         Me.TextBox_Identifiant.Size = New System.Drawing.Size(255, 26)
         Me.TextBox_Identifiant.TabIndex = 16
@@ -100,63 +101,62 @@ Partial Class F_Login
         'Lbl_MP
         '
         Me.Lbl_MP.AutoSize = True
-        Me.Lbl_MP.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_MP.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_MP.ForeColor = System.Drawing.Color.Teal
-        Me.Lbl_MP.Location = New System.Drawing.Point(137, 141)
+        Me.Lbl_MP.Location = New System.Drawing.Point(151, 141)
         Me.Lbl_MP.Name = "Lbl_MP"
-        Me.Lbl_MP.Size = New System.Drawing.Size(142, 23)
+        Me.Lbl_MP.Size = New System.Drawing.Size(129, 24)
         Me.Lbl_MP.TabIndex = 15
-        Me.Lbl_MP.Text = "Mot de Passe  :"
+        Me.Lbl_MP.Text = "Mot de Passe:"
         '
         'Lbl_Identifiant
         '
         Me.Lbl_Identifiant.AutoSize = True
-        Me.Lbl_Identifiant.Font = New System.Drawing.Font("Roboto", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Identifiant.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Identifiant.ForeColor = System.Drawing.Color.Teal
-        Me.Lbl_Identifiant.Location = New System.Drawing.Point(169, 109)
+        Me.Lbl_Identifiant.Location = New System.Drawing.Point(182, 111)
         Me.Lbl_Identifiant.Name = "Lbl_Identifiant"
-        Me.Lbl_Identifiant.Size = New System.Drawing.Size(109, 23)
+        Me.Lbl_Identifiant.Size = New System.Drawing.Size(103, 24)
         Me.Lbl_Identifiant.TabIndex = 14
         Me.Lbl_Identifiant.Text = "Identifiant : "
         '
         'LblByNic
         '
         Me.LblByNic.AutoSize = True
-        Me.LblByNic.Font = New System.Drawing.Font("SerifGothic LT Light", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblByNic.Location = New System.Drawing.Point(82, 98)
+        Me.LblByNic.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblByNic.Location = New System.Drawing.Point(86, 110)
         Me.LblByNic.Name = "LblByNic"
-        Me.LblByNic.Size = New System.Drawing.Size(36, 14)
+        Me.LblByNic.Size = New System.Drawing.Size(38, 13)
         Me.LblByNic.TabIndex = 13
         Me.LblByNic.Text = "By Nic"
         '
         'Lbl_titre
         '
         Me.Lbl_titre.AutoSize = True
-        Me.Lbl_titre.Font = New System.Drawing.Font("SerifGothic LT", 26.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_titre.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_titre.ForeColor = System.Drawing.Color.Teal
-        Me.Lbl_titre.Location = New System.Drawing.Point(135, 14)
+        Me.Lbl_titre.Location = New System.Drawing.Point(242, 9)
         Me.Lbl_titre.Name = "Lbl_titre"
-        Me.Lbl_titre.Size = New System.Drawing.Size(187, 43)
+        Me.Lbl_titre.Size = New System.Drawing.Size(206, 39)
         Me.Lbl_titre.TabIndex = 12
         Me.Lbl_titre.Text = "RATEL - DB"
         '
-        'BtnLogo
+        'PanelLogo
         '
-        Me.BtnLogo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BtnLogo.FlatAppearance.BorderSize = 0
-        Me.BtnLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLogo.Image = Global.RatelDB.My.Resources.Resources.ratel_honey_badger_database
-        Me.BtnLogo.Location = New System.Drawing.Point(12, 12)
-        Me.BtnLogo.Name = "BtnLogo"
-        Me.BtnLogo.Size = New System.Drawing.Size(106, 100)
-        Me.BtnLogo.TabIndex = 11
-        Me.BtnLogo.UseVisualStyleBackColor = True
+        Me.PanelLogo.BackgroundImage = Global.RatelDB.My.Resources.Resources.ratel_honey_badger_database
+        Me.PanelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelLogo.Controls.Add(Me.LblByNic)
+        Me.PanelLogo.Location = New System.Drawing.Point(15, 12)
+        Me.PanelLogo.Name = "PanelLogo"
+        Me.PanelLogo.Size = New System.Drawing.Size(127, 126)
+        Me.PanelLogo.TabIndex = 27
         '
         'F_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(554, 241)
+        Me.ClientSize = New System.Drawing.Size(562, 221)
+        Me.Controls.Add(Me.PanelLogo)
         Me.Controls.Add(Me.Lbl_ActionRegister)
         Me.Controls.Add(Me.Button_Cancel)
         Me.Controls.Add(Me.Button_Ok)
@@ -165,11 +165,11 @@ Partial Class F_Login
         Me.Controls.Add(Me.TextBox_Identifiant)
         Me.Controls.Add(Me.Lbl_MP)
         Me.Controls.Add(Me.Lbl_Identifiant)
-        Me.Controls.Add(Me.LblByNic)
         Me.Controls.Add(Me.Lbl_titre)
-        Me.Controls.Add(Me.BtnLogo)
         Me.Name = "F_Login"
         Me.Text = "RatelDB - Formulaire de connexion"
+        Me.PanelLogo.ResumeLayout(False)
+        Me.PanelLogo.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -185,5 +185,5 @@ Partial Class F_Login
     Friend WithEvents Lbl_Identifiant As Label
     Friend WithEvents LblByNic As Label
     Friend WithEvents Lbl_titre As Label
-    Friend WithEvents BtnLogo As Button
+    Friend WithEvents PanelLogo As Panel
 End Class

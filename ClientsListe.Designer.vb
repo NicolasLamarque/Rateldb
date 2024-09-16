@@ -30,9 +30,9 @@ Partial Class ClientsListe
         'DataGridView_clients
         '
         Me.DataGridView_clients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView_clients.Location = New System.Drawing.Point(0, 57)
+        Me.DataGridView_clients.Location = New System.Drawing.Point(0, 145)
         Me.DataGridView_clients.Name = "DataGridView_clients"
-        Me.DataGridView_clients.Size = New System.Drawing.Size(440, 505)
+        Me.DataGridView_clients.Size = New System.Drawing.Size(440, 417)
         Me.DataGridView_clients.TabIndex = 0
         '
         'Panel1
@@ -40,7 +40,7 @@ Partial Class ClientsListe
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(439, 58)
+        Me.Panel1.Size = New System.Drawing.Size(439, 139)
         Me.Panel1.TabIndex = 1
         '
         'ClientsListe

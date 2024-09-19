@@ -32,14 +32,5 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
-        ' Charger une image dans le PictureBox
-        Try
-            ' Remplacez le chemin par le chemin de votre image
-            Dim imagePath As String
-            PictureBox1.Image = Image.FromFile(imagePath) ' Charger l'image depuis le fichier
-        Catch ex As Exception
-            MessageBox.Show("Erreur lors du chargement de l'image : " & ex.Message)
-        End Try
-    End Sub
+
 End Class

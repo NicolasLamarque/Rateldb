@@ -45,28 +45,29 @@ Imports System.Data.SQLite
             End Using
         End Sub
 
-        ' Fonction pour vérifier le login
-        Public Function VerifyLogin(userName As String, password As String) As Boolean
-            Using connection As New SQLiteConnection(connectionString)
-                connection.Open()
-                Dim query As String = "SELECT Password, Salt FROM Users WHERE UserName = @UserName"
-                Using command As New SQLiteCommand(query, connection)
-                    command.Parameters.AddWithValue("@UserName", userName)
-                    Using reader As SQLiteDataReader = command.ExecuteReader()
-                        If reader.Read() Then
-                            Dim storedPassword As String = reader("Password").ToString()
-                            Dim storedSalt As String = reader("Salt").ToString()
-                            Dim hashedInputPassword As String = HashPassword(password, storedSalt)
-                            Return storedPassword = hashedInputPassword
-                        End If
-                    End Using
+    ' Fonction pour vérifier le login
+    Public Function VerifyLogin(userName As String, password As String) As Boolean
+        Using connection As New SQLiteConnection(connectionString)
+            connection.Open()
+            Dim query As String = "SELECT Password, Salt FROM Users WHERE UserName = @UserName"
+            Using command As New SQLiteCommand(query, connection)
+                command.Parameters.AddWithValue("@UserName", userName)
+                Using reader As SQLiteDataReader = command.ExecuteReader()
+                    If reader.Read() Then
+                        Dim storedPassword As String = reader("Password").ToString()
+                        Dim storedSalt As String = reader("Salt").ToString()
+                        Dim hashedInputPassword As String = HashPassword(password, storedSalt)
+                        Return storedPassword = hashedInputPassword
+
+                    End If
                 End Using
             End Using
-            Return False
-        End Function
+        End Using
+        Return False
+    End Function
 
-        ' Fonction pour mettre à jour un mot de passe
-        Public Sub SetPassword(userName As String, newPassword As String)
+    ' Fonction pour mettre à jour un mot de passe
+    Public Sub SetPassword(userName As String, newPassword As String)
             Dim newSalt As String = GenerateSalt()
             Dim hashedPassword As String = HashPassword(newPassword, newSalt)
 

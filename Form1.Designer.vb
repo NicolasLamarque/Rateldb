@@ -45,6 +45,8 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PanelLogo = New System.Windows.Forms.Panel()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -224,9 +226,9 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.LabelPrenom)
         Me.Panel1.Controls.Add(Me.txtNom)
         Me.Panel1.ForeColor = System.Drawing.Color.Teal
-        Me.Panel1.Location = New System.Drawing.Point(44, 119)
+        Me.Panel1.Location = New System.Drawing.Point(364, 25)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(575, 243)
+        Me.Panel1.Size = New System.Drawing.Size(770, 243)
         Me.Panel1.TabIndex = 25
         '
         'Label1
@@ -234,7 +236,7 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Teal
-        Me.Label1.Location = New System.Drawing.Point(67, 109)
+        Me.Label1.Location = New System.Drawing.Point(387, 15)
         Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(109, 19)
@@ -250,11 +252,31 @@ Partial Class Form1
         Me.PanelLogo.Size = New System.Drawing.Size(100, 97)
         Me.PanelLogo.TabIndex = 26
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(12, 137)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(313, 29)
+        Me.ComboBox1.TabIndex = 27
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(14, 113)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(56, 21)
+        Me.Label2.TabIndex = 28
+        Me.Label2.Text = "Client"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1432, 727)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.PanelLogo)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Lbl_SousTitre)
@@ -296,4 +318,6 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents PanelLogo As Panel
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label2 As Label
 End Class

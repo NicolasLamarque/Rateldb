@@ -26,8 +26,8 @@ Public Class F_Param
     Private Sub rbThemeClair_CheckedChanged(sender As Object, e As EventArgs) Handles rbThemeClair.CheckedChanged
         If rbThemeClair.Checked Then
             ' Sauvegarder le thème sélectionné
-            saveTheme("clair")
-            Dim theme As String = "clair"
+            saveTheme("clear")
+            Dim theme As String = "clear"
             ApplyTheme(theme)
         End If
 
@@ -35,8 +35,8 @@ Public Class F_Param
     Private Sub rbThemeSombre_CheckedChanged(sender As Object, e As EventArgs) Handles rbThemeSombre.CheckedChanged
         If rbThemeSombre.Checked Then
             ' Sauvegarder le thème sélectionné
-            saveTheme("sombre")
-            Dim theme As String = "sombre"
+            saveTheme("dark")
+            Dim theme As String = "dark"
             ApplyTheme(theme)
         End If
 
@@ -45,7 +45,7 @@ Public Class F_Param
     End Sub
 
     Private Sub ApplyTheme(theme As String)
-        If theme = "sombre" Then
+        If theme = "dark" Then
             Me.BackColor = Color.DarkGray
             Me.ForeColor = Color.LightGray
             ' Changez d'autres contrôles ici
@@ -55,10 +55,10 @@ Public Class F_Param
             ' Changez d'autres contrôles ici
         End If
 
-        If theme = "clair" Then
+        If theme = "clear" Then
             rbThemeClair.Checked = True
             Me.Lbl_infoTheme.Text = "Theme :" & theme.ToString
-        ElseIf theme = "sombre" Then
+        ElseIf theme = "dark" Then
             rbThemeSombre.Checked = True
             Me.Lbl_infoTheme.Text = "Theme :" & theme.ToString
         End If

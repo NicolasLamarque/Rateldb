@@ -3,46 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\classclient.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:classclient.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\moduletest.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:moduletest.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\registerform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\registerform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:registerform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\registerform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\registerform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:registerform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\f_login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:f_login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\f_login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:f_login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\f_param.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:f_param.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\f_param.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:f_param.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|RatelDB||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\loginmanager.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:loginmanager.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43E325EE-9C1D-4CEF-857C-71F7CE4C7F00}|RatelDB.vbproj|c:\\users\\nic\\documents\\github\\rateldb\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|8998e48e-b89a-4034-b66e-353d8c1fdc2e"
     }
   ],
   "DocumentGroupContainers": [
@@ -52,131 +34,78 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainForm.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\MainForm.vb",
-              "RelativeDocumentMoniker": "MainForm.vb",
-              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\MainForm.vb [Design]",
-              "RelativeToolTip": "MainForm.vb [Design]",
+              "DocumentIndex": 1,
+              "Title": "ModuleTest.vb",
+              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\ModuleTest.vb",
+              "RelativeDocumentMoniker": "ModuleTest.vb",
+              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\ModuleTest.vb",
+              "RelativeToolTip": "ModuleTest.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-19T00:07:11.559Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-22T19:18:53.001Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "F_Param.vb",
-              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Param.vb",
-              "RelativeDocumentMoniker": "F_Param.vb",
-              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Param.vb",
-              "RelativeToolTip": "F_Param.vb",
-              "ViewState": "AgIAACwAAAAAAAAAAAAwwB0AAAAoAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ClassClient.vb",
+              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\ClassClient.vb",
+              "RelativeDocumentMoniker": "ClassClient.vb",
+              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\ClassClient.vb",
+              "RelativeToolTip": "ClassClient.vb",
+              "ViewState": "AgIAAFICAAAAAAAAAAAkwGkCAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-18T23:38:38.655Z",
+              "WhenOpened": "2024-09-22T00:41:44.055Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "RegisterForm.vb",
               "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\RegisterForm.vb",
               "RelativeDocumentMoniker": "RegisterForm.vb",
               "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\RegisterForm.vb",
               "RelativeToolTip": "RegisterForm.vb",
-              "ViewState": "AgIAABAAAAAAAAAAAAAjwCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-18T23:28:30.66Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T00:19:01.117Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "F_Param.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Param.vb",
-              "RelativeDocumentMoniker": "F_Param.vb",
-              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Param.vb [Design]",
-              "RelativeToolTip": "F_Param.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-18T23:20:11.789Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "RegisterForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\RegisterForm.vb",
               "RelativeDocumentMoniker": "RegisterForm.vb",
               "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\RegisterForm.vb [Design]",
               "RelativeToolTip": "RegisterForm.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-18T23:17:12.115Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RatelDB",
-              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\RatelDB.vbproj",
-              "RelativeDocumentMoniker": "RatelDB.vbproj",
-              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\RatelDB.vbproj",
-              "RelativeToolTip": "RatelDB.vbproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-09-18T01:40:54.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "loginManager.vb",
-              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\loginManager.vb",
-              "RelativeDocumentMoniker": "loginManager.vb",
-              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\loginManager.vb",
-              "RelativeToolTip": "loginManager.vb",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwDwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-15T23:25:32.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T00:18:59.783Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "F_Login.vb",
-              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Login.vb",
-              "RelativeDocumentMoniker": "F_Login.vb",
-              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Login.vb",
-              "RelativeToolTip": "F_Login.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
+              "Title": "MainForm.vb",
+              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\MainForm.vb",
+              "RelativeDocumentMoniker": "MainForm.vb",
+              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\MainForm.vb",
+              "RelativeToolTip": "MainForm.vb",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-15T23:13:26.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-21T23:37:18.44Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "F_Login.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Login.vb",
-              "RelativeDocumentMoniker": "F_Login.vb",
-              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\F_Login.vb [Design]",
-              "RelativeToolTip": "F_Login.vb [Design]",
+              "DocumentIndex": 2,
+              "Title": "MainForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\MainForm.vb",
+              "RelativeDocumentMoniker": "MainForm.vb",
+              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\MainForm.vb [Design]",
+              "RelativeToolTip": "MainForm.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-15T23:12:39.26Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Form1.vb",
-              "DocumentMoniker": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\Form1.vb",
-              "RelativeDocumentMoniker": "Form1.vb",
-              "ToolTip": "C:\\Users\\NIC\\Documents\\GitHub\\Rateldb\\Form1.vb",
-              "RelativeToolTip": "Form1.vb",
-              "ViewState": "AgIAAAUAAAAAAAAAAADwvyIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-09-15T22:22:51.959Z"
+              "WhenOpened": "2024-09-21T23:31:41.172Z"
             }
           ]
         }

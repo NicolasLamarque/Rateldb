@@ -1,99 +1,124 @@
 ﻿
 
 Imports System.Data.SQLite
-    Imports System.Security.Cryptography
-    Imports System.Text
+Imports System.Security.Cryptography
+Imports System.Text
 
-    Public Class LoginManager
-        Private connectionString As String = "Data Source=RatelDatabase.db;Version=3;"
+Public Class LoginManager
+    Private connectionString As String = "Data Source=RatelDatabase.db;Version=3;"
 
-        ' Fonction pour hasher le mot de passe avec un salt
-        Private Function HashPassword(password As String, salt As String) As String
-            Using sha256 As SHA256 = sha256.Create()
-                Dim combined As String = salt & password
-                Dim bytes As Byte() = Encoding.UTF8.GetBytes(combined)
-                Dim hashBytes As Byte() = sha256.ComputeHash(bytes)
-                Return Convert.ToBase64String(hashBytes)
-            End Using
-        End Function
-
-        ' Fonction pour générer un salt
-        Private Function GenerateSalt() As String
-            Using rng As New RNGCryptoServiceProvider()
-                Dim saltBytes(31) As Byte ' 32 bytes = 256 bits
-                rng.GetBytes(saltBytes)
-                Return Convert.ToBase64String(saltBytes)
-            End Using
-        End Function
-
-        ' Fonction pour créer un utilisateur
-        Public Sub CreateUser(userName As String, password As String, email As String, isAdmin As Boolean)
-            Dim salt As String = GenerateSalt()
-            Dim hashedPassword As String = HashPassword(password, salt)
-
-            Using connection As New SQLiteConnection(connectionString)
-                connection.Open()
-                Dim query As String = "INSERT INTO Users (UserName, Password, Salt, Email, Admin) VALUES (@UserName, @Password, @Salt, @Email, @Admin)"
-                Using command As New SQLiteCommand(query, connection)
-                    command.Parameters.AddWithValue("@UserName", userName)
-                    command.Parameters.AddWithValue("@Password", hashedPassword)
-                    command.Parameters.AddWithValue("@Salt", salt)
-                    command.Parameters.AddWithValue("@Email", email)
-                    command.Parameters.AddWithValue("@Admin", isAdmin)
-                    command.ExecuteNonQuery()
-                End Using
-            End Using
-        End Sub
-
-    ' Fonction pour vérifier le login
-    Public Function VerifyLogin(userName As String, password As String) As Boolean
-        Using connection As New SQLiteConnection(connectionString)
-            connection.Open()
-            Dim query As String = "SELECT Password, Salt FROM Users WHERE UserName = @UserName"
-            Using command As New SQLiteCommand(query, connection)
-                command.Parameters.AddWithValue("@UserName", userName)
-                Using reader As SQLiteDataReader = command.ExecuteReader()
-                    If reader.Read() Then
-                        Dim storedPassword As String = reader("Password").ToString()
-                        Dim storedSalt As String = reader("Salt").ToString()
-                        Dim hashedInputPassword As String = HashPassword(password, storedSalt)
-                        Return storedPassword = hashedInputPassword
-
-                    End If
-                End Using
+    Public Function UserExists(username As String) As Boolean
+        Using conn As New SQLiteConnection(connectionString)
+            conn.Open()
+            Dim query As String = "SELECT COUNT(*) FROM Users WHERE UserName = @UserName"
+            Using cmd As New SQLiteCommand(query, conn)
+                cmd.Parameters.AddWithValue("@UserName", username)
+                Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                Return count > 0
             End Using
         End Using
+    End Function
+
+    Public Function GetUserCredentials(userId As String) As (Password As String, Salt As String)
+        Dim crud As New sqliteCRUD()
+        Dim query As String = "SELECT Password, Salt FROM Users WHERE UserId = @Id"
+        Dim parameters As New Dictionary(Of String, Object)
+        parameters.Add("@Id", userId)
+
+        Dim results = crud.ExecuteSelect(query, parameters)
+
+        If results.Count > 0 Then
+            Dim row = results(0)
+            Return (row("Password").ToString(), row("Salt").ToString())
+        End If
+
+        Return (String.Empty, String.Empty)
+    End Function
+    Public Function RegisterUser(username As String, password As String, email As String, isAdmin As Boolean) As Boolean
+        Dim salt As String = GenerateSalt()
+        Dim hashedPassword As String = HashPassword(password, salt)
+
+        Using conn As New SQLiteConnection(connectionString)
+            conn.Open()
+            Dim query As String = "INSERT INTO Users (UserName, Password, Salt, Email, IsAdmin) VALUES (@UserName, @Password, @Salt, @Email, @IsAdmin)"
+            Using cmd As New SQLiteCommand(query, conn)
+                cmd.Parameters.AddWithValue("@UserName", username)
+
+                cmd.Parameters.AddWithValue("@Password", hashedPassword)
+                cmd.Parameters.AddWithValue("@Salt", salt)
+                cmd.Parameters.AddWithValue("@Email", email)
+                cmd.Parameters.AddWithValue("@IsAdmin", isAdmin)
+                Dim result As Integer = cmd.ExecuteNonQuery()
+                Return result > 0
+            End Using
+        End Using
+    End Function
+
+    Public Function GenerateSalt() As String
+        ' Implémentez la génération de sel ici
+        ' Par exemple :
+        Using rng As New RNGCryptoServiceProvider()
+            Dim saltBytes As Byte() = New Byte(15) {}
+            rng.GetBytes(saltBytes)
+            Return Convert.ToBase64String(saltBytes)
+        End Using
+    End Function
+
+    Public Function HashPassword(password As String, salt As String) As String
+        ' Implémentez le hachage du mot de passe ici
+        ' Par exemple, en utilisant SHA256 :
+        Using sha256 As SHA256 = SHA256.Create()
+            Dim passwordWithSaltBytes As Byte() = Encoding.UTF8.GetBytes(password & salt)
+            Dim hashBytes As Byte() = sha256.ComputeHash(passwordWithSaltBytes)
+            Return Convert.ToBase64String(hashBytes)
+        End Using
+    End Function
+
+    Public Function GetPass(ByVal key As String) As String
+        Dim query As String = "SELECT Password FROM Users WHERE Id = @key"
+        Using conn As New SQLiteConnection("Data Source=RatelDatabase.db;Version=3;")
+            conn.Open()
+            Using cmd As New SQLiteCommand(query, conn)
+                cmd.Parameters.AddWithValue("@key", key)
+                Dim result As Object = cmd.ExecuteScalar()
+                If result IsNot Nothing Then
+                    Return result.ToString()
+                Else
+                    Return String.Empty
+                End If
+            End Using
+        End Using
+    End Function
+
+    Public Function VerifyLogin(userName As String, password As String) As Boolean
+        Dim crud As New sqliteCRUD()
+
+        Try
+            Dim query As String = "SELECT Password, Salt FROM Users WHERE UserName = @UserName"
+            Dim parameters As New Dictionary(Of String, Object)
+            parameters.Add("@UserName", userName)
+
+            Dim results = crud.ExecuteSelect(query, parameters)
+
+            If results.Count > 0 Then
+                Dim row = results(0)
+                Dim storedPassword As String = row("Password").ToString()
+                Dim storedSalt As String = row("Salt").ToString()
+                Dim hashedInputPassword As String = HashPassword(password, storedSalt)
+
+                Console.WriteLine("Tentative de connexion pour l'utilisateur : " & userName)
+                Console.WriteLine("Mot de passe stocké : " & storedPassword)
+                Console.WriteLine("Sel stocké : " & storedSalt)
+                Console.WriteLine("Mot de passe haché en entrée : " & hashedInputPassword)
+
+                Return storedPassword = hashedInputPassword
+            Else
+                Console.WriteLine("Utilisateur non trouvé : " & userName)
+            End If
+        Catch ex As Exception
+            Console.WriteLine("Erreur lors de la vérification du login : " & ex.Message)
+        End Try
         Return False
     End Function
 
-    ' Fonction pour mettre à jour un mot de passe
-    Public Sub SetPassword(userName As String, newPassword As String)
-            Dim newSalt As String = GenerateSalt()
-            Dim hashedPassword As String = HashPassword(newPassword, newSalt)
-
-            Using connection As New SQLiteConnection(connectionString)
-                connection.Open()
-                Dim query As String = "UPDATE Users SET Password = @Password, Salt = @Salt WHERE UserName = @UserName"
-                Using command As New SQLiteCommand(query, connection)
-                    command.Parameters.AddWithValue("@Password", hashedPassword)
-                    command.Parameters.AddWithValue("@Salt", newSalt)
-                    command.Parameters.AddWithValue("@UserName", userName)
-                    command.ExecuteNonQuery()
-                End Using
-            End Using
-        End Sub
-
-        ' Fonction pour vérifier si un utilisateur est admin
-        Public Function IsAdmin(userName As String) As Boolean
-            Using connection As New SQLiteConnection(connectionString)
-                connection.Open()
-                Dim query As String = "SELECT Admin FROM Users WHERE UserName = @UserName"
-                Using command As New SQLiteCommand(query, connection)
-                    command.Parameters.AddWithValue("@UserName", userName)
-                    Dim result = command.ExecuteScalar()
-                    Return If(result IsNot Nothing AndAlso Convert.ToBoolean(result), True, False)
-                End Using
-            End Using
-        End Function
-    End Class
-
+End Class

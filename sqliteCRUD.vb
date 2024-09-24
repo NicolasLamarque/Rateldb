@@ -5,23 +5,33 @@ Imports System.IO
 Imports System.Reflection
 
 Public Class sqliteCRUD
-    Private SQLiteConn As New SQLiteConnection
-    Private dbFileName As String = "RatelDatabase.db" ' Nom du fichier de base de données
-    Private SQLitecnStr As String
-    Private SQLiteCmd As New SQLiteCommand
+    Private ReadOnly SQLiteConn As New SQLiteConnection
+    Private ReadOnly dbFileName As String
+    Private ReadOnly connectionString As String
 
-    ' Constructeur pour initialiser la chaîne de connexion
-    Public Sub New()
-        SetConnectionString()
-        SQLiteConn.ConnectionString = SQLitecnStr
+    Public Sub New(Optional dbName As String = "RatelDatabase.db")
+        dbFileName = dbName
+        connectionString = GetConnectionString()
+        SQLiteConn.ConnectionString = connectionString
     End Sub
 
-    Private Sub SetConnectionString()
-        Dim currentDirectory As String = AppDomain.CurrentDomain.BaseDirectory
-        Dim dbPath As String = Path.Combine(currentDirectory, "..", dbFileName)
-        SQLitecnStr = $"Data Source={dbPath};Version=3;"
-    End Sub
+    Private Function GetConnectionString() As String
+        Dim dbPath As String = GetDatabasePath()
+        Dim connStr As String = $"Data Source={dbPath};Version=3;"
+        Console.WriteLine($"Chaîne de connexion : {connStr}")
+        Return connStr
+    End Function
 
+
+
+    Public Function GetDatabasePath() As String
+        Dim baseDirectory As String = AppDomain.CurrentDomain.BaseDirectory
+        Return Path.Combine(baseDirectory, "RatelDatabase.db")
+    End Function
+
+    Public Function GetConnection() As SQLiteConnection
+        Return New SQLiteConnection(connectionString)
+    End Function
     ' Méthode pour ajouter un enregistrement
     Public Sub AddRecord(tableName As String, parameters As Dictionary(Of String, Object))
         Try
@@ -284,9 +294,85 @@ Public Class sqliteCRUD
         Return client
     End Function
 
+    Public Function TableExists(tableName As String) As Boolean
+        Dim query As String = "SELECT name FROM sqlite_master WHERE type='table' AND name=@tableName;"
+        Using conn As New SQLiteConnection("Data Source=RatelDatabase.db;Version=3;")
+            conn.Open()
+            Using cmd As New SQLiteCommand(query, conn)
+                cmd.Parameters.AddWithValue("@tableName", tableName)
+                Dim result As Object = cmd.ExecuteScalar()
+                Return result IsNot Nothing
+            End Using
+        End Using
+    End Function
 
+    Public Sub CreateUsersTable()
+        If Not TableExists("Users") Then
+            Dim query As String = "CREATE TABLE Users (Id INTEGER PRIMARY KEY AUTOINCREMENT, UserName TEXT NOT NULL, Password TEXT NOT NULL, Salt TEXT NOT NULL);"
+            Using conn As New SQLiteConnection("Data Source=RatelDatabase.db;Version=3;")
+                conn.Open()
+                Using cmd As New SQLiteCommand(query, conn)
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+            Console.WriteLine("Table Users créée avec succès.")
+        Else
+            Console.WriteLine("La table Users existe déjà.")
+        End If
+    End Sub
+    Public Function FieldExists(fieldName As String, value As String) As Boolean
+        Dim allowedFields As String() = {"Id", "UserName", "Email", "Password"} ' Ajoutez ici tous les champs autorisés
 
+        If Not allowedFields.Contains(fieldName) Then
+            Console.WriteLine($"Erreur : Champ non autorisé - {fieldName}")
+            Return False
+        End If
 
+        Try
+            Using conn As SQLiteConnection = GetConnection()
+                Dim query As String = $"SELECT COUNT(*) FROM Users WHERE {fieldName} = @Value"
+                Using cmd As New SQLiteCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@Value", value)
+                    Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                    Return count > 0
+                End Using
+            End Using
+        Catch ex As Exception
+            Console.WriteLine($"Erreur lors de la vérification du champ {fieldName}: {ex.Message}")
+            Return False
+        End Try
+    End Function
+    Public Function ExecuteSelect(query As String, parameters As Dictionary(Of String, Object)) As List(Of Dictionary(Of String, Object))
+        Dim results As New List(Of Dictionary(Of String, Object))
+
+        Try
+            Using connection As SQLiteConnection = GetConnection()
+                connection.Open()
+                Using command As New SQLiteCommand(query, connection)
+                    ' Ajouter les paramètres à la commande
+                    For Each param In parameters
+                        command.Parameters.AddWithValue(param.Key, param.Value)
+                    Next
+
+                    ' Exécuter la commande et lire les résultats
+                    Using reader As SQLiteDataReader = command.ExecuteReader()
+                        While reader.Read()
+                            Dim row As New Dictionary(Of String, Object)
+                            For i As Integer = 0 To reader.FieldCount - 1
+                                row.Add(reader.GetName(i), reader.GetValue(i))
+                            Next
+                            results.Add(row)
+                        End While
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            Console.WriteLine("Erreur lors de l'exécution de la requête SELECT : " & ex.Message)
+            Throw
+        End Try
+
+        Return results
+    End Function
 End Class
 
 

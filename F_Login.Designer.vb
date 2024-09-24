@@ -33,6 +33,7 @@ Partial Class F_Login
         Me.LblByNic = New System.Windows.Forms.Label()
         Me.Lbl_titre = New System.Windows.Forms.Label()
         Me.PanelLogo = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.PanelLogo.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -151,11 +152,21 @@ Partial Class F_Login
         Me.PanelLogo.Size = New System.Drawing.Size(127, 126)
         Me.PanelLogo.TabIndex = 27
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(57, 195)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 28
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'F_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(562, 221)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PanelLogo)
         Me.Controls.Add(Me.Lbl_ActionRegister)
         Me.Controls.Add(Me.Button_Cancel)
@@ -186,4 +197,5 @@ Partial Class F_Login
     Friend WithEvents LblByNic As Label
     Friend WithEvents Lbl_titre As Label
     Friend WithEvents PanelLogo As Panel
+    Friend WithEvents Button1 As Button
 End Class

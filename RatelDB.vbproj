@@ -95,17 +95,12 @@
     <Compile Include="BaseForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ClassClient.vb" />
     <Compile Include="ClientManager.vb" />
     <Compile Include="ClientsListe.Designer.vb">
       <DependentUpon>ClientsListe.vb</DependentUpon>
     </Compile>
     <Compile Include="ClientsListe.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAccueil.Designer.vb">
@@ -135,6 +130,8 @@
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ModuleTest.vb" />
+    <Compile Include="MonRatelClass.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -159,13 +156,11 @@
     </Compile>
     <Compile Include="sqliteCRUD.vb" />
     <Compile Include="ThemeManager.vb" />
+    <Compile Include="UserManager.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ClientsListe.resx">
       <DependentUpon>ClientsListe.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAccueil.resx">
       <DependentUpon>FormAccueil.vb</DependentUpon>
@@ -210,6 +205,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lightbulb_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\navigate_left.png" />
+    <Content Include="Resources\navigate_left2.png" />
+    <Content Include="Resources\navigate_right.png" />
+    <Content Include="Resources\navigate_right2.png" />
+    <Content Include="Resources\pawn_blue_add.png" />
+    <Content Include="Resources\Settings_256x256.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

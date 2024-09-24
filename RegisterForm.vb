@@ -1,19 +1,33 @@
-﻿Public Class RegisterForm
+﻿
+
+Public Class RegisterForm
     Dim currentLanguage As String = GetSetting("language")
     Dim CurrentTheme As String = GetSetting("theme")
+    Dim LoginManager As New LoginManager()
+
     Private Sub RegisterForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ApplyLanguage(currentLanguage)
+
+        ApplyLanguageForm(currentLanguage)
         Applytheme(CurrentTheme)
+        TextBoxAdminCode.Visible = False
+
     End Sub
 
 
-    Private Sub ApplyLanguage(language As String)
+    Private Sub ApplyLanguageForm(language As String)
         If language = "fr" Then
+
             Lbl_TitreInfo.Text = "Formulaire d'enregistrement"
             Me.Text = "Formulaire d'enregistrement"
+            LabelIdentifiant.Text = "Identifiant :"
+            LabelMonPasse.Text = "Mot de Passe :"
+            LabelMail.Text = "Courriel :"
         ElseIf language = "en" Then
             Lbl_TitreInfo.Text = "Register form"
             Me.Text = "Register form"
+            LabelIdentifiant.Text = "Identifiant :"
+            LabelMonPasse.Text = "Password :"
+            LabelMail.Text = "Mail :"
         End If
     End Sub
 
@@ -37,5 +51,50 @@
         Me.Close()
 
 
+    End Sub
+
+    Private Sub CheckBoxAdmin_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxAdmin.CheckedChanged
+        If CheckBoxAdmin.Checked Then
+            TextBoxAdminCode.Visible = True
+            TextBoxAdminCode.Text = GetSetting("IsAdminCode")
+
+        Else
+            TextBoxAdminCode.Visible = False
+        End If
+    End Sub
+
+    Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
+        Dim username As String = TextBoxIdentifiant.Text.Trim()
+        Dim password As String = TextBoxMotPasse.Text
+        Dim email As String = TextBoxMail.Text.Trim()
+        Dim isAdmin As Boolean = CheckBoxAdmin.Checked
+        Dim adminCode As String = TextBoxAdminCode.Text.Trim()
+
+        ' Vérifications de base
+        If String.IsNullOrEmpty(username) OrElse String.IsNullOrEmpty(password) OrElse String.IsNullOrEmpty(email) Then
+            MessageBox.Show("Veuillez remplir tous les champs obligatoires.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+
+
+        Try
+            ' Vérifier si l'utilisateur existe déjà
+            If LoginManager.UserExists(username) Then
+                MessageBox.Show("Cet identifiant est déjà utilisé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
+
+            ' Enregistrer le nouvel utilisateur
+            If LoginManager.RegisterUser(username, password, email, isAdmin) Then
+                MessageBox.Show("Enregistrement réussi !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                F_Login.Show()
+                Me.Close()
+            Else
+                MessageBox.Show("Échec de l'enregistrement. Veuillez réessayer.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Une erreur est survenue : " & ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class

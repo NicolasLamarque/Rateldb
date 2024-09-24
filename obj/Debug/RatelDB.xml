@@ -32,10 +32,59 @@ RatelDB
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:RatelDB.My.Resources.Resources.navigate_left">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.navigate_left2">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.navigate_right">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.navigate_right2">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.pawn_blue_add">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RatelDB.My.Resources.Resources.ratel_honey_badger_database">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.Settings_256x256">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="M:RatelDB.sqliteCRUD.SearchByForeignKey(System.String,System.String,System.Int32)">
+ <summary>
+ Recherche des enregistrements dans une table spécifiée en utilisant une clé étrangère.
+ </summary>
+ <param name="tableName">Nom de la table à rechercher</param>
+ <param name="foreignKeyColumn">Nom de la colonne de clé étrangère</param>
+ <param name="foreignKeyValue">Valeur de la clé étrangère à rechercher</param>
+ <returns>DataTable contenant les résultats de la recherche</returns>
+ <exception cref="T:System.Exception">Levée si une erreur se produit pendant la recherche</exception>
+</member>
+<member name="M:RatelDB.sqliteCRUD.SearchByName(System.String,System.String,System.String)">
+ <summary>
+ Recherche des enregistrements dans une table spécifiée en utilisant une correspondance partielle sur le nom.
+ </summary>
+ <param name="tableName">Nom de la table à rechercher</param>
+ <param name="nameColumn">Nom de la colonne contenant le nom</param>
+ <param name="name">Nom à rechercher (correspondance partielle)</param>
+ <returns>DataTable contenant les résultats de la recherche</returns>
 </member>
 </members>
 </doc>

@@ -37,3 +37,5 @@ C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.vbproj.Up2Date
 C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.exe
 C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.xml
 C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.pdb
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.F_NotesSuivi.resources
+C:\Users\NIC\Documents\GitHub\Rateldb\obj\Debug\RatelDB.F_ChargeClient.resources

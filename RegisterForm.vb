@@ -1,5 +1,7 @@
 ﻿
 
+Imports System.Data.SQLite
+
 Public Class RegisterForm
     Dim currentLanguage As String = GetSetting("language")
     Dim CurrentTheme As String = GetSetting("theme")
@@ -65,22 +67,19 @@ Public Class RegisterForm
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
         Dim username As String = TextBoxIdentifiant.Text.Trim()
-        Dim password As String = TextBoxMotPasse.Text
+        Dim password As String = TextBoxMotPasse.Text.Trim()
         Dim email As String = TextBoxMail.Text.Trim()
         Dim isAdmin As Boolean = CheckBoxAdmin.Checked
         Dim adminCode As String = TextBoxAdminCode.Text.Trim()
-
         ' Vérifications de base
         If String.IsNullOrEmpty(username) OrElse String.IsNullOrEmpty(password) OrElse String.IsNullOrEmpty(email) Then
             MessageBox.Show("Veuillez remplir tous les champs obligatoires.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
 
-
-
         Try
             ' Vérifier si l'utilisateur existe déjà
-            If LoginManager.UserExists(username) Then
+            If UserExists(username) Then
                 MessageBox.Show("Cet identifiant est déjà utilisé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return
             End If
@@ -97,4 +96,18 @@ Public Class RegisterForm
             MessageBox.Show("Une erreur est survenue : " & ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
+    Public Function UserExists(username As String) As Boolean
+        Dim connectionString As String = "Data Source=RatelDatabase.db;Version=3;"
+        Using conn As New SQLiteConnection(connectionString)
+            conn.Open()
+            Dim query As String = "SELECT COUNT(*) FROM Users WHERE UserName = @UserName"
+            Using cmd As New SQLiteCommand(query, conn)
+                cmd.Parameters.AddWithValue("@UserName", username)
+                Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                Return count > 0 ' Retourne vrai si l'utilisateur existe
+            End Using
+        End Using
+    End Function
+
 End Class

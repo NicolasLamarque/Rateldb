@@ -96,6 +96,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClassClient.vb" />
+    <Compile Include="ClassNote.vb" />
     <Compile Include="ClientManager.vb" />
     <Compile Include="ClientsListe.Designer.vb">
       <DependentUpon>ClientsListe.vb</DependentUpon>
@@ -103,16 +104,29 @@
     <Compile Include="ClientsListe.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="fontClass.vb" />
     <Compile Include="FormAccueil.Designer.vb">
       <DependentUpon>FormAccueil.vb</DependentUpon>
     </Compile>
     <Compile Include="FormAccueil.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="F_ChargeClient.Designer.vb">
+      <DependentUpon>F_ChargeClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="F_ChargeClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="F_Login.Designer.vb">
       <DependentUpon>F_Login.vb</DependentUpon>
     </Compile>
     <Compile Include="F_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_NotesSuivi.Designer.vb">
+      <DependentUpon>F_NotesSuivi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="F_NotesSuivi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="F_Param.Designer.vb">
@@ -130,6 +144,7 @@
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ModuleGestionTexte.vb" />
     <Compile Include="ModuleTest.vb" />
     <Compile Include="MonRatelClass.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -154,6 +169,7 @@
     <Compile Include="RegisterForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SearchManager.vb" />
     <Compile Include="sqliteCRUD.vb" />
     <Compile Include="ThemeManager.vb" />
     <Compile Include="UserManager.vb" />
@@ -165,8 +181,14 @@
     <EmbeddedResource Include="FormAccueil.resx">
       <DependentUpon>FormAccueil.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_ChargeClient.resx">
+      <DependentUpon>F_ChargeClient.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_Login.resx">
       <DependentUpon>F_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_NotesSuivi.resx">
+      <DependentUpon>F_NotesSuivi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Param.resx">
       <DependentUpon>F_Param.vb</DependentUpon>
@@ -207,6 +229,15 @@
     <None Include="Resources\lightbulb_on.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Trash Empty.png" />
+    <None Include="Resources\text_list_bullets.png" />
+    <None Include="Resources\text_underlined2.png" />
+    <None Include="Resources\text_italics.png" />
+    <None Include="Resources\text_bold.png" />
+    <None Include="Resources\checks.png" />
+    <None Include="Resources\Cancel_256x256.png" />
+    <None Include="Resources\color_wheel.png" />
+    <None Include="Resources\font.png" />
     <Content Include="Resources\navigate_left.png" />
     <Content Include="Resources\navigate_left2.png" />
     <Content Include="Resources\navigate_right.png" />

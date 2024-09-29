@@ -1,6 +1,21 @@
-﻿Public Class UserManager
+﻿Imports System.Data.SQLite
+
+Public Class UserManager
     Dim crypto As New LoginManager
     Private crud As New sqliteCRUD()
+    Private connectionString As String = "Data Source=RatelDatabase.db;Version=3;"
+
+    Private _Identifiant As String
+    Public Property Username As String
+        Get
+            Return _Identifiant
+        End Get
+        Set(value As String)
+            _Identifiant = value?.Trim()
+
+        End Set
+    End Property
+
 
     Public Function AddUser(username As String, email As String, password As String, Optional IsAdmin As Boolean = False) As Boolean
         Try
@@ -25,4 +40,5 @@
     End Function
 
     ' Autres méthodes pour la gestion des utilisateurs...
+
 End Class

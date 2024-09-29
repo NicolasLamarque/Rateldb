@@ -7,17 +7,7 @@ Imports System.Text
 Public Class LoginManager
     Private connectionString As String = "Data Source=RatelDatabase.db;Version=3;"
 
-    Public Function UserExists(username As String) As Boolean
-        Using conn As New SQLiteConnection(connectionString)
-            conn.Open()
-            Dim query As String = "SELECT COUNT(*) FROM Users WHERE UserName = @UserName"
-            Using cmd As New SQLiteCommand(query, conn)
-                cmd.Parameters.AddWithValue("@UserName", username)
-                Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-                Return count > 0
-            End Using
-        End Using
-    End Function
+
 
     Public Function GetUserCredentials(userId As String) As (Password As String, Salt As String)
         Dim crud As New sqliteCRUD()

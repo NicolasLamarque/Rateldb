@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.RatelDB.MainForm
+            Me.MainForm = Global.RatelDB.F_NotesSuivi
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

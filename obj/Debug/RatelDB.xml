@@ -22,6 +22,26 @@ RatelDB
   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
 </summary>
 </member>
+<member name="P:RatelDB.My.Resources.Resources.Cancel_256x256">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.checks">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.color_wheel">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.font">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RatelDB.My.Resources.Resources.lightbulb">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
@@ -63,6 +83,31 @@ RatelDB
 </summary>
 </member>
 <member name="P:RatelDB.My.Resources.Resources.Settings_256x256">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.text_bold">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.text_italics">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.text_list_bullets">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.text_underlined2">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RatelDB.My.Resources.Resources.Trash_Empty">
 <summary>
   Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>

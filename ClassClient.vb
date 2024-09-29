@@ -255,7 +255,7 @@ Public Class Client
 
 
     'Privée
-    Private _Statut As String
+    Private _Statut As Boolean
     'Publique
     Public Property Statut As Boolean
         Get
@@ -277,15 +277,15 @@ Public Class Client
         Get
             Return _Pivot
         End Get
-
         Set(value As String)
-            If value = "Oui" OrElse value = "Non" Then
-                _Pivot = value
-            Else
-                Throw New ArgumentException("La valeur doit être 'Oui' ou 'Non'.")
+            If value.Trim() = "Oui" OrElse value.Trim() = "Non" OrElse Nothing Then
+                _Pivot = value.Trim()
+
             End If
         End Set
+
     End Property
+
 
     'Private
     Private _Note As String
@@ -461,7 +461,7 @@ Public Class Client
             If niveauxValides.Contains(value) Then
                 _niveauDeSoins = value
             Else
-                Throw New ArgumentException("Niveau de soins non valide")
+                _niveauDeSoins = "Inconnu"
             End If
         End Set
     End Property
@@ -879,11 +879,36 @@ Public Class Client
         End Set
     End Property
     'Privée
+    Private _AideFinanciere As Boolean
+
     'Publique
     Public Property AideFinanciere As Boolean
-    'Privée
+        Get
+            Return _AideFinanciere
+
+        End Get
+        Set(value As Boolean)
+            If _AideFinanciere <> value Then
+                _AideFinanciere = value
+            End If
+        End Set
+    End Property
+    'Privée 
+    Private _AideCoop As Boolean
     'Publique
     Public Property AideCoop As Boolean
+
+        Get
+            Return _AideCoop
+
+        End Get
+        Set(value As Boolean)
+            If _AideCoop <> value Then
+                _AideCoop = value
+            End If
+        End Set
+    End Property
+
     'Privée
     'Publique
     Public Property AntecedentsSuicide As Boolean
@@ -990,7 +1015,7 @@ Public Class Client
     Public Sub New()
         ' Initialisation des valeurs par défaut
         DateInscription = Date.Now
-        Statut = "Actif"
+        Statut = True
         Pivot = "Pivot"
         NiveauAutonomie = "Autonome"
         NiveauDeSoins = "inconnu"

@@ -3,8 +3,10 @@ Imports System.Security.Cryptography
 Imports System.Text
 
 Public Class F_Login
+    Dim UserMng As New UserManager
     Dim logincheck = New LoginManager
     Dim crud As New sqliteCRUD()
+    Dim MyClient As New Client
 
 
 
@@ -33,6 +35,8 @@ Public Class F_Login
 
     Private Sub F_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
+
     End Sub
 
 
@@ -44,7 +48,8 @@ Public Class F_Login
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        Dim userchecking As String = TextBox_Identifiant.Text
+        UserExists(userchecking)
     End Sub
 
     Private Sub Lbl_ActionRegister_Click(sender As Object, e As EventArgs) Handles Lbl_ActionRegister.Click
@@ -52,4 +57,17 @@ Public Class F_Login
         formRegiter.Show()
 
     End Sub
+
+    Public Function UserExists(username As String) As Boolean
+        Dim connectionString As String = "Data Source=RatelDatabase.db;Version=3;"
+        Using conn As New SQLiteConnection(connectionString)
+            conn.Open()
+            Dim query As String = "SELECT COUNT(*) FROM Users WHERE UserName = @UserName"
+            Using cmd As New SQLiteCommand(query, conn)
+                cmd.Parameters.AddWithValue("@UserName", username)
+                Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                Return MessageBox.Show(count > 0)
+            End Using
+        End Using
+    End Function
 End Class
